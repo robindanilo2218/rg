@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquinaria Agrícola RG | Equipos para el Campo</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Zilla+Slab:wght@600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1a7a14', // Verde tipo tractor
+                            dark: '#111827',
+                            yellow: '#facc15', // Amarillo maquinaria
+                            red: '#dc2626'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        serif: ['Zilla Slab', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Efecto parallax suave para el hero */
+        .bg-hero {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.75), rgba(17, 24, 39, 0.85)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2064&auto=format&fit=crop'); /* Imagen de campo/ganado */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .whatsapp-float {
+            animation: pulse-green 2s infinite;
+        }
+        
+        .phone-float {
+            animation: pulse-blue 2s infinite;
+            animation-delay: 1s;
+        }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @keyframes pulse-blue {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <!-- Logo (Usando el vector proporcionado) -->
+                    <img src="logo02.svg" alt="Maquinaria Agrícola RG" class="h-12 w-auto object-contain">
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-700 hover:text-brand-green font-bold transition">Inicio</a>
+                    <a href="#beneficios" class="text-gray-700 hover:text-brand-green font-bold transition">Para el Ganadero</a>
+                    <a href="#catalogo" class="text-gray-700 hover:text-brand-green font-bold transition">Nuestro Catálogo</a>
+                    <a href="https://wa.me/50248292434" target="_blank" class="bg-brand-green text-white px-5 py-2 rounded-lg font-bold hover:bg-green-800 transition shadow-lg flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Cotizar Ahora
+                    </a>
+                </div>
+
+                <!-- Menú Móvil Botón -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-green focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#inicio" class="block px-4 py-3 text-gray-700 font-bold hover:bg-gray-100">Inicio</a>
+            <a href="#beneficios" class="block px-4 py-3 text-gray-700 font-bold hover:bg-gray-100">Para el Ganadero</a>
+            <a href="#catalogo" class="block px-4 py-3 text-gray-700 font-bold hover:bg-gray-100">Nuestro Catálogo</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="bg-hero relative py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left">
+            <div class="lg:w-2/3">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-yellow text-brand-dark font-bold text-sm mb-4 tracking-wider uppercase">Fuerza, Hierro y Trabajo Duro</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 font-serif">
+                    El Campo No Se Detiene, <br>
+                    <span class="text-brand-yellow">Nuestras Máquinas Tampoco.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto lg:mx-0">
+                    Fabricamos picadoras, molinos y mezcladoras diseñadas para resistir el trabajo rudo de la finca. Haga rendir su cosecha de milpa, optimice el zacate y multiplique el peso de su ganado.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#catalogo" class="bg-brand-yellow text-brand-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition shadow-lg text-center">
+                        <i class="fas fa-tractor mr-2"></i> Ver Máquinas
+                    </a>
+                    <a href="tel:+50248292434" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-brand-dark transition shadow-lg text-center">
+                        <i class="fas fa-phone mr-2"></i> Llamar a un Asesor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Marketing / Dolor del cliente -->
+    <section id="beneficios" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black text-brand-dark mb-4">Fabricadas por manos expertas, para el agricultor exigente</h2>
+                <div class="w-24 h-1 bg-brand-green mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Sabemos lo que cuesta producir en el campo. Por eso, nuestras máquinas no son de juguete; están hechas de hierro grueso, soldadura de alta penetración y motores probados.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Beneficio 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-16 h-16 bg-green-100 text-brand-green rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Aproveche el 100% del Forraje</h3>
+                    <p class="text-gray-600">Pique zacate, caña y milpa seca o verde a la medida perfecta. Reduzca el desperdicio en los comederos; lo que la vaca no se comía entero, ahora se lo comerá picado.</p>
+                </div>
+                <!-- Beneficio 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-cow"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Mayor Producción de Leche y Carne</h3>
+                    <p class="text-gray-600">Al preparar sus propias mezclas y concentrados con nuestras mezcladoras, usted controla la nutrición de sus animales, logrando más litros de leche y mayor peso al destete.</p>
+                </div>
+                <!-- Beneficio 3 -->
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition text-center">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Hechas para Durar</h3>
+                    <p class="text-gray-600">Olvídese de las latas delgadas. Reforzamos las chumaceras, usamos cuchillas de acero templado y garantizamos repuestos para que su máquina trabaje de sol a sol.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section id="catalogo" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-black text-brand-dark mb-4">Nuestro Catálogo de Hierro</h2>
+                    <div class="w-24 h-1 bg-brand-green mb-4"></div>
+                    <p class="text-lg text-gray-600">Equipos listos para entrega. Elija la que mejor se adapte a su finca.</p>
+                </div>
+                <a href="https://wa.me/50248292434?text=Hola,%20me%20gustar%C3%ADa%20ver%20videos%20de%20las%20m%C3%A1quinas%20trabajando." target="_blank" class="hidden md:inline-flex items-center text-brand-green font-bold hover:underline">
+                    Ver videos de máquinas trabajando <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Producto 1 (Picadoras estacionarias verdes/rojas) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 transition duration-300">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="IMG-20260413-WA0037.jpg" alt="Picadoras de Forraje" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-brand-yellow text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase">Más Vendida</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Picadoras de Forraje Móviles</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">Equipos compactos pero potentes, con llantas para fácil traslado. Ideales para el corte diario de pastos, caña de azúcar y rastrojo para el ganado tabulado.</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Llantas de trabajo pesado</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Fácil mantenimiento de cuchillas</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Estructura antivibración</li>
+                        </ul>
+                        <button onclick="openWhatsApp('Picadora de Forraje Móvil')" class="w-full bg-gray-900 text-white font-bold py-3 rounded-lg hover:bg-brand-green transition flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-green-400"></i> Consultar Precio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 (Mezcladora Roja Grande) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 transition duration-300">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="IMG-20260413-WA0036.jpg" alt="Mezcladora Horizontal Roja" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Mezcladora Dual con Picadora</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">La solución completa para la lechería o el engorde. Pique el verde y mézclelo al instante con granos y melaza en una sola máquina. Gran capacidad por bache.</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Tolva de alta capacidad (roja/verde)</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Sistema de poleas reforzado</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Plataforma de acceso seguro</li>
+                        </ul>
+                        <button onclick="openWhatsApp('Mezcladora Dual Roja')" class="w-full bg-gray-900 text-white font-bold py-3 rounded-lg hover:bg-brand-green transition flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-green-400"></i> Consultar Precio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 (Mezcladora Verde con Motor) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 transition duration-300">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="IMG-20260413-WA0035.jpg" alt="Mezcladora Industrial con Motor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Planta Mezcladora Autónoma</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">Independencia total. Este equipo incluye motor propio, ideal para galeras o corrales donde no hay acceso directo a toma de fuerza o electricidad trifásica.</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Motor de combustión integrado</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Escalera y plataforma lateral</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Mezclado homogéneo rápido</li>
+                        </ul>
+                        <button onclick="openWhatsApp('Planta Mezcladora Autónoma (Verde)')" class="w-full bg-gray-900 text-white font-bold py-3 rounded-lg hover:bg-brand-green transition flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-green-400"></i> Consultar Precio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 4 (Combinada Verde con banda) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 transition duration-300">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="IMG-20260413-WA0033.jpg" alt="Molino Picadora Industrial" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Picadora Multipropósito Pro</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">Robusta boca de alimentación y chasis largo. Diseñada para largas jornadas de trabajo moliendo granos secos o picando forrajes voluminosos.</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Doble función: Moler y Picar</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Eje de cuchillas balanceado</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Chasis extra largo con llantas</li>
+                        </ul>
+                        <button onclick="openWhatsApp('Picadora Multipropósito Pro (Verde)')" class="w-full bg-gray-900 text-white font-bold py-3 rounded-lg hover:bg-brand-green transition flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-green-400"></i> Consultar Precio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto 5 (Máquina Roja Grande de Molienda) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-1 transition duration-300">
+                    <div class="relative h-64 overflow-hidden bg-gray-200">
+                        <img src="IMG-20260413-WA0034.jpg" alt="Molino de Martillos" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Sistema de Procesamiento Plus</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">Con transmisión por cadena y poleas de gran tamaño. Una bestia para el trabajo pesado que requiere alta tracción y fuerza constante.</p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Transmisión robusta expuesta</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Bandeja de alimentación amplia</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i> Alta capacidad de toneladas/hora</li>
+                        </ul>
+                        <button onclick="openWhatsApp('Sistema de Procesamiento Plus (Roja)')" class="w-full bg-gray-900 text-white font-bold py-3 rounded-lg hover:bg-brand-green transition flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-green-400"></i> Consultar Precio
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Producto 6 (Taller general) -->
+                <div class="bg-brand-dark rounded-2xl overflow-hidden shadow-lg text-white flex flex-col justify-center text-center p-8 border-4 border-brand-yellow relative">
+                    <img src="IMG-20260413-WA0038.jpg" class="absolute inset-0 w-full h-full object-cover opacity-20" alt="Taller">
+                    <div class="relative z-10">
+                        <i class="fas fa-tools text-5xl text-brand-yellow mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">¿Necesita un equipo a la medida?</h3>
+                        <p class="text-gray-300 mb-6">Somos fabricantes. Modificamos chasis, adaptamos motores eléctricos o de gasolina, y construimos según los requerimientos de su finca.</p>
+                        <button onclick="openWhatsApp('Fabricación a Medida')" class="bg-brand-yellow text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition w-full">
+                            Hablar con el Herrero Mayor
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Confianza / Footer Superior -->
+    <section class="py-16 bg-brand-green relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <img src="IMG-20260413-WA0039.jpg" alt="Atardecer en el campo" class="w-32 h-32 rounded-full border-4 border-white shadow-xl mx-auto mb-6 object-cover">
+            <h2 class="text-3xl font-bold text-white mb-4">Un negocio de confianza para la gente del campo</h2>
+            <p class="text-green-100 text-lg mb-8">Sabemos que el agricultor busca máquinas que no lo dejen tirado a media faena. Cientos de ganaderos ya confían en el hierro fuerte de Maquinaria Agrícola RG.</p>
+            <p class="text-white font-bold text-2xl"><i class="fas fa-phone-alt mr-2 text-brand-yellow"></i> +502 4829-2434</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-400 py-10 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <img src="logo01.jpg" alt="Logo Footer" class="h-16 mx-auto mb-6 rounded shadow-lg opacity-90">
+            <p class="mb-4">Maquinaria Agrícola RG &copy; 2026. Todos los derechos reservados.</p>
+            <p class="text-sm">Fabricando fuerza y productividad para las fincas ganaderas y agrícolas.</p>
+        </div>
+    </footer>
+
+    <!-- BOTONES FLOTANTES (MANDATORIOS) -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+        <!-- Llamada Directa -->
+        <a href="tel:+50248292434" class="phone-float bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-xl hover:bg-blue-700 transition transform hover:scale-110 tooltip-container relative">
+            <i class="fas fa-phone-alt"></i>
+            <span class="absolute right-full mr-4 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap opacity-0 transition-opacity duration-300">Llamar Ahora</span>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/50248292434?text=Hola,%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20una%20m%C3%A1quina." target="_blank" class="whatsapp-float bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl hover:bg-green-600 transition transform hover:scale-110 tooltip-container relative">
+            <i class="fab fa-whatsapp"></i>
+            <span class="absolute right-full mr-4 bg-gray-800 text-white text-xs px-3 py-1 rounded whitespace-nowrap opacity-0 transition-opacity duration-300">Mensaje por WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Script para interactividad -->
+    <script>
+        // Función para inyectar el nombre del producto en el mensaje de WhatsApp
+        function openWhatsApp(producto) {
+            const numero = "50248292434";
+            const mensaje = encodeURIComponent(`Hola Maquinaria Agrícola RG, estoy viendo su página web y me interesa cotizar el equipo: ${producto}. ¿Me podría dar precio y detalles?`);
+            window.open(`https://wa.me/${numero}?text=${mensaje}`, '_blank');
+        }
+
+        // Mostrar tooltips de botones flotantes al pasar el mouse
+        const tooltips = document.querySelectorAll('.tooltip-container');
+        tooltips.forEach(container => {
+            container.addEventListener('mouseenter', () => {
+                container.querySelector('span').classList.remove('opacity-0');
+            });
+            container.addEventListener('mouseleave', () => {
+                container.querySelector('span').classList.add('opacity-0');
+            });
+        });
+
+        // Menú móvil responsivo
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        btnMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
