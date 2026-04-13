@@ -68,16 +68,18 @@
     <nav class="bg-white shadow-md sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4 min-h-[5rem]">
-                <div class="flex items-center w-48 sm:w-64 md:w-80">
-                    <!-- Logo (Usando el vector proporcionado) -->
-                    <img src="logo02.svg" alt="Maquinaria Agrícola RG" class="w-full h-auto max-h-20 md:max-h-28 object-contain object-left">
+                <!-- Contenedor del logo con ancho libre -->
+                <div class="flex items-center">
+                    <img src="logo02.svg" alt="Maquinaria Agrícola RG" class="h-16 md:h-20 w-auto object-contain object-left">
                 </div>
                 
                 <!-- Menú Escritorio -->
-                <div class="hidden md:flex space-x-8 items-center">
+                <div class="hidden md:flex space-x-6 lg:space-x-8 items-center">
                     <a href="#inicio" class="text-gray-700 hover:text-brand-green font-bold transition">Inicio</a>
                     <a href="#beneficios" class="text-gray-700 hover:text-brand-green font-bold transition">Para el Ganadero</a>
-                    <a href="#catalogo" class="text-gray-700 hover:text-brand-green font-bold transition">Nuestro Catálogo</a>
+                    <a href="#catalogo" class="text-gray-700 hover:text-brand-green font-bold transition">Catálogo</a>
+                    <a href="#videos" class="text-gray-700 hover:text-brand-green font-bold transition">Videos</a>
+                    <a href="#ubicacion" class="text-gray-700 hover:text-brand-green font-bold transition">Ubicación</a>
                     <a href="https://wa.me/50248292434" target="_blank" class="bg-brand-green text-white px-5 py-2 rounded-lg font-bold hover:bg-green-800 transition shadow-lg flex items-center gap-2">
                         <i class="fab fa-whatsapp text-lg"></i> Cotizar Ahora
                     </a>
@@ -97,6 +99,8 @@
             <a href="#inicio" class="block px-4 py-3 text-gray-700 font-bold hover:bg-gray-100">Inicio</a>
             <a href="#beneficios" class="block px-4 py-3 text-gray-700 font-bold hover:bg-gray-100">Para el Ganadero</a>
             <a href="#catalogo" class="block px-4 py-3 text-gray-700 font-bold hover:bg-gray-100">Nuestro Catálogo</a>
+            <a href="#videos" class="block px-4 py-3 text-gray-700 font-bold hover:bg-gray-100">Videos</a>
+            <a href="#ubicacion" class="block px-4 py-3 text-gray-700 font-bold hover:bg-gray-100">Ubicación</a>
         </div>
     </nav>
 
@@ -171,7 +175,7 @@
                     <div class="w-24 h-1 bg-brand-green mb-4"></div>
                     <p class="text-lg text-gray-600">Equipos listos para entrega. Elija la que mejor se adapte a su finca.</p>
                 </div>
-                <a href="https://wa.me/50248292434?text=Hola,%20me%20gustar%C3%ADa%20ver%20videos%20de%20las%20m%C3%A1quinas%20trabajando." target="_blank" class="hidden md:inline-flex items-center text-brand-green font-bold hover:underline">
+                <a href="#videos" class="hidden md:inline-flex items-center text-brand-green font-bold hover:underline">
                     Ver videos de máquinas trabajando <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
@@ -291,11 +295,91 @@
         </div>
     </section>
 
+    <!-- Sección de Videos de YouTube -->
+    <section id="videos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black text-brand-dark mb-4">El Hierro en Acción</h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Vea el rendimiento y la fuerza de nuestras máquinas trabajando directamente en el campo. No le contamos, se lo demostramos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Video 1: Más Visto -->
+                <div class="rounded-xl overflow-hidden shadow-xl bg-gray-100 border border-gray-200 transform transition hover:-translate-y-2 duration-300">
+                    <iframe class="w-full h-[500px]" src="https://www.youtube.com/embed/m4paT7i_3Po" title="Video más visto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="p-4 bg-brand-dark text-white text-center">
+                        <p class="font-bold text-lg text-brand-yellow"><i class="fas fa-star mr-2"></i> Nuestro Video Más Visto</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2: Excelente Equipo -->
+                <div class="rounded-xl overflow-hidden shadow-xl bg-gray-100 border border-gray-200 transform transition hover:-translate-y-2 duration-300">
+                    <iframe class="w-full h-[500px]" src="https://www.youtube.com/embed/4vCxQOvi-jA" title="Excelente Equipo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="p-4 bg-brand-dark text-white text-center">
+                        <p class="font-bold text-lg"><i class="fas fa-check-circle text-green-400 mr-2"></i> Excelente Rendimiento</p>
+                    </div>
+                </div>
+
+                <!-- Video 3: Magnífico Video -->
+                <div class="rounded-xl overflow-hidden shadow-xl bg-gray-100 border border-gray-200 transform transition hover:-translate-y-2 duration-300">
+                    <iframe class="w-full h-[500px]" src="https://www.youtube.com/embed/v6DYjcua2e4" title="Máquina Trabajando" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="p-4 bg-brand-dark text-white text-center">
+                        <p class="font-bold text-lg"><i class="fas fa-bolt text-blue-400 mr-2"></i> Demostración de Fuerza</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Suscribirse -->
+            <div class="text-center">
+                <a href="https://www.youtube.com/@maquinariaagricolarg2918" target="_blank" class="inline-flex items-center justify-center gap-3 bg-[#FF0000] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition shadow-lg transform hover:scale-105">
+                    <i class="fab fa-youtube text-3xl"></i> Suscríbase a nuestro Canal para más contenido
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ubicación -->
+    <section id="ubicacion" class="py-16 bg-gray-100 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-black text-brand-dark mb-4">Venga a Nuestra Fábrica</h2>
+                    <div class="w-24 h-1 bg-brand-yellow mb-6"></div>
+                    <p class="text-lg text-gray-600 mb-6">Conozca de primera mano la calidad del hierro y la soldadura que utilizamos. Estamos con las puertas abiertas para que elija la máquina perfecta para su finca.</p>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-brand-green mb-6">
+                        <h4 class="font-bold text-2xl mb-3 flex items-center text-brand-dark">
+                            <i class="fas fa-map-marker-alt text-brand-green mr-3 text-3xl"></i> ¿Cómo Llegar?
+                        </h4>
+                        <p class="text-gray-600 mb-6">Haga clic en el botón abajo para abrir la ruta directa en su celular y llegar sin perderse.</p>
+                        <a href="https://share.google/jVb56JIshuvy5LStV" target="_blank" class="flex justify-center items-center gap-3 w-full bg-blue-600 text-white px-6 py-4 rounded-xl font-bold hover:bg-blue-700 transition shadow-md text-lg">
+                            <i class="fas fa-directions"></i> Abrir Ruta en Google Maps
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 w-full h-96 bg-gray-300 rounded-2xl overflow-hidden shadow-xl relative flex items-center justify-center group cursor-pointer" onclick="window.open('https://share.google/jVb56JIshuvy5LStV', '_blank')">
+                    <!-- Mapa Visual Placeholder -->
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop')] bg-cover bg-center opacity-50 group-hover:opacity-40 transition duration-300"></div>
+                    <div class="relative z-10 text-center p-8 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl mx-4 transform group-hover:scale-105 transition duration-300 border border-gray-100">
+                        <div class="bg-brand-green text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-map-marked-alt text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-brand-dark mb-2">Maquinaria Agrícola RG</h3>
+                        <p class="text-blue-600 font-bold mb-0">Haga clic aquí para navegar <i class="fas fa-external-link-alt ml-1 text-sm"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Sección de Confianza / Footer Superior -->
     <section class="py-16 bg-brand-green relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
         <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-            <img src="IMG-20260413-WA0039.jpg" alt="Atardecer en el campo" class="w-32 h-32 rounded-full border-4 border-white shadow-xl mx-auto mb-6 object-cover">
+            <!-- Imagen ajustada a object-bottom para que se vea la milpa -->
+            <img src="IMG-20260413-WA0039.jpg" alt="Atardecer en el campo" class="w-32 h-32 rounded-full border-4 border-white shadow-xl mx-auto mb-6 object-cover object-bottom">
             <h2 class="text-3xl font-bold text-white mb-4">Un negocio de confianza para la gente del campo</h2>
             <p class="text-green-100 text-lg mb-8">Sabemos que el agricultor busca máquinas que no lo dejen tirado a media faena. Cientos de ganaderos ya confían en el hierro fuerte de Maquinaria Agrícola RG.</p>
             <p class="text-white font-bold text-2xl"><i class="fas fa-phone-alt mr-2 text-brand-yellow"></i> +502 4829-2434</p>
